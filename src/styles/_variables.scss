@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300;700&display=swap');
+
+$ig-med-screen: 1200px !default;
+$ig-small-screen: 768px !default;
+$ig-xsmall-screen: 540px !default;
+// COLOR VARIABLES
+$color-primary: #1f3b88;
+$color-primary-dark: #b28451;
+
+$color-secondary: #101d2c;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483a;
+$color-grey-dark-2: #6d5d4b;
+
+// FONT VARIABLES
+$font-primary: 'Saira', sans-serif;
+$font-display: 'November', sans-serif;
+
+//BREAK POINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
