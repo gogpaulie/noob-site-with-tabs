@@ -36,23 +36,6 @@
             <div class="divider-title"></div>
           </div>
 
-          <div class="service-features">
-            <div class="feature">
-              <img src="../assets/cut.svg" alt="video splicing icon" />
-              <h4>VOD Splicing</h4>
-              <p>Get your streams cut down to the content you want.</p>
-            </div>
-            <div class="feature">
-              <img src="../assets/film.svg" alt="video splicing icon" />
-              <h4>Channel Trailers</h4>
-              <p>Introduce new users to your channel.</p>
-            </div>
-            <div class="feature">
-              <img src="../assets/newspaper.svg" alt="video splicing icon" />
-              <h4>Commercials</h4>
-              <p>Satisfy your sponsors and keep the offers coming.</p>
-            </div>
-          </div>
           <div class="work__card">
             <div class="work__card--video">
               <youtube
@@ -63,6 +46,47 @@
                 :resize="true"
                 :player-vars="playerVars"
               ></youtube>
+            </div>
+          </div>
+          <div class="service-features">
+            <div class="feature">
+              <h4>VOD Splicing</h4>
+              <div class="work__card--video">
+                <youtube
+                  :video-id="videoId"
+                  ref="youtube"
+                  @playing="playing"
+                  :fit-parent="true"
+                  :resize="true"
+                  :player-vars="playerVars"
+                ></youtube>
+              </div>
+            </div>
+            <div class="feature">
+              <h4>Channel Trailers</h4>
+              <div class="work__card--video">
+                <youtube
+                  :video-id="videoId"
+                  ref="youtube"
+                  @playing="playing"
+                  :fit-parent="true"
+                  :resize="true"
+                  :player-vars="playerVars"
+                ></youtube>
+              </div>
+            </div>
+            <div class="feature">
+              <h4>Commercials</h4>
+              <div class="work__card--video">
+                <youtube
+                  :video-id="videoId"
+                  ref="youtube"
+                  @playing="playing"
+                  :fit-parent="true"
+                  :resize="true"
+                  :player-vars="playerVars"
+                ></youtube>
+              </div>
             </div>
           </div>
         </div>
@@ -124,6 +148,17 @@
             <h3 class="service-title">Twitch</h3>
             <div class="divider-title"></div>
           </div>
+          <div class="work__card">
+            <div class="work__card--video">
+              <iframe
+                src="https://player.twitch.tv/?video=v40464143&parent=streamernews.example.com&autoplay=false"
+                height="720"
+                width="1280"
+                allowfullscreen="true"
+              >
+              </iframe>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -133,6 +168,7 @@
 <script>
 export default {
   name: 'Work',
+
   data() {
     return {
       videoId: 'rg08fB-WXhI',
@@ -178,7 +214,7 @@ export default {
 
 .feature {
   text-align: center;
-  width: 225px;
+  width: 300px;
   background-color: rgba($color: #000000, $alpha: 0.3);
   border-radius: 10px;
   padding: 2rem;
