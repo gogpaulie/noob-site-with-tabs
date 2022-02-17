@@ -51,7 +51,7 @@
           <div class="service-features">
             <div class="feature">
               <h4>VOD Splicing</h4>
-              <div class="work__card--video">
+              <div class="work__card--video-small">
                 <youtube
                   :video-id="videoId"
                   ref="youtube"
@@ -64,7 +64,7 @@
             </div>
             <div class="feature">
               <h4>Channel Trailers</h4>
-              <div class="work__card--video">
+              <div class="work__card--video-small">
                 <youtube
                   :video-id="videoId"
                   ref="youtube"
@@ -77,7 +77,7 @@
             </div>
             <div class="feature">
               <h4>Commercials</h4>
-              <div class="work__card--video">
+              <div class="work__card--video-small">
                 <youtube
                   :video-id="videoId"
                   ref="youtube"
@@ -148,7 +148,7 @@
             <h3 class="service-title">Twitch</h3>
             <div class="divider-title"></div>
           </div>
-          <div class="work__card">
+          <!-- <div class="work__card">
             <div class="work__card--video">
               <iframe
                 src="https://player.twitch.tv/?video=v40464143&parent=streamernews.example.com&autoplay=false"
@@ -158,7 +158,7 @@
               >
               </iframe>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -356,6 +356,10 @@ export default {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 3rem;
+
+  @media (max-width: $ig-small-screen) {
+    justify-content: center;
+  }
 }
 
 .nav-tabs .nav-link.active {
@@ -372,6 +376,12 @@ export default {
   padding-left: 3rem;
   padding-right: 3rem;
   font-size: 2rem;
+
+  @media (max-width: $ig-small-screen) {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+  }
 }
 
 .nav-tabs .nav-link:hover {
